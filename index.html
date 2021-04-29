@@ -1,0 +1,382 @@
+<!-----PLEASE PLEASE PLEASE.----->
+<!-------READ THESE LINES-------->
+
+<!-----I am very new to coding so this code can appear boring ---->
+<!------This is very simple --->
+<!-----No. of days i commited to this code = 1----->
+<!----My only aim to create this is self improvement---->
+<!----So please help me in my journey of self improvement by writing your opinions in comments---->
+<!----I am not afraid to face rude comments but yeah i want you all to be truthful please--->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+         <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    </head>
+    <body>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:62.5%;
+}
+.main{
+    height:100vh;
+    width:100vw;
+    background-color:lime;
+    position:relative;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    background: linear-gradient(45deg, #ea84ff , #ce84ff , #848dff , #84d5ff , #84ffc0 , #b3ff84 ,  #ffde84, #ffad84, #ff8484, #ff84cd);
+    background-size: 500% 100%;
+animation:a 16s linear alternate infinite;
+
+}
+
+@keyframes a {
+
+0% {
+    background-position: 0%
+}
+
+100% {
+    background-position: 100%
+}
+
+}
+
+
+.box{
+    height:350px;
+    width:350px;
+    background-color:transparent;
+    position:relative;
+}
+
+.clock{
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    background:linear-gradient(to right bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur( 20.0px );
+    box-shadow:0 .5vmin 1vmin 1vmin #2223;
+}
+
+.circle{
+    position:absolute;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    background-color:black;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+
+.st{
+    position:absolute;
+
+    height:30%;
+    width:3%;
+    background-color:black;
+    top:5%;
+    left:50%; 
+    transform:translateX(-50%);
+    transform-origin:bottom;
+    clip-path:polygon(50% 0,85% 10%,60% 10%,80% 100%,20% 100%,40% 10%,15% 10%);
+    filter:drop-shadow(3px 3px 0 red);
+}
+.hour{
+    top:20%;
+    left:49%;
+    transform:translateX(-50%);
+}
+.min{
+    height:35%;
+    width:2%;
+    top:15%;
+    left:49.5%;
+    transform:translateX(-50%);
+}
+
+.sec{
+    height:40%;
+    width:1%;
+    top:10%;
+}
+
+.n{
+     position: absolute;
+     width: 95%;
+     height: 95%;
+     top:2.5%;
+     left:2.5%;
+     text-align: center;
+     font-size: 1.8rem;  
+     font-family:graduate;  
+}
+
+.n1{
+    transform:rotate(30deg);
+}
+.n2{
+    transform:rotate(60deg);
+}
+
+.n3{
+    transform:rotate(90deg);
+}
+.n4{
+    transform:rotate(120deg);
+}
+.n5{
+    transform:rotate(150deg);
+}
+.n6{
+    transform:rotate(180deg);
+}
+.n7{
+    transform:rotate(210deg);
+}
+.n8{
+    transform:rotate(240deg);
+}
+.n9{
+    transform:rotate(270deg);
+}
+
+.n10{
+    transform:rotate(300deg);
+}
+.n11{
+    transform:rotate(330deg);
+}
+
+/*------------------------------*/
+
+.t{
+    text-shadow:0 .1rem .1rem #2229; 
+}
+.t1{
+    transform:rotate(-30deg);
+}
+.t2{
+    transform:rotate(-60deg);
+}
+
+.t3{
+    transform:rotate(-90deg);
+}
+.t4{
+    transform:rotate(-120deg);
+}
+.t5{
+    transform:rotate(-150deg);
+}
+.t6{
+    transform:rotate(-180deg);
+}
+.t7{
+    transform:rotate(-210deg);
+}
+.t8{
+    transform:rotate(-240deg);
+}
+.t9{
+    transform:rotate(-270deg);
+}
+
+.t10{
+    transform:rotate(-300deg);
+}
+.t11{
+    transform:rotate(-330deg);
+}
+
+/*-----------------------------------*/
+
+
+.box1{
+    position:absolute;
+    height:30%;
+    width:90%;
+    background-color:transparent;
+    bottom:0%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr .5fr 1fr;
+    grid-template-rows: 1fr;
+    gap:1% 1%;
+    grid-template-areas:
+    "hr dot1 dm dot2 dsec";
+    height:auto;
+    width:90%;
+    position:absolute;
+    left:5%;
+    top:40%;
+    
+}
+.hr, .dot1, .dm, .dot2, .dsec{
+    text-align: center;
+    font-family: 'Segment7Standard';
+    font-size:3.8rem;
+    padding:10px;
+    width:auto;
+    border-radius:1rem;
+    background: #eee5; 
+    text-shadow:0 .1rem .1rem #2229; 
+    box-shadow:0 .5vmin 1vmin 1vmin #2223;
+}
+.hr { 
+    grid-area: hr; 
+}
+
+.dot1 { 
+    grid-area: dot1; 
+}
+
+.dm { 
+    grid-area: dm; 
+}
+
+.dot2 { 
+    grid-area: dot2; 
+}
+
+.dsec { 
+    grid-area: dsec; 
+}
+
+
+.tb{
+    position:absolute;
+    background-color:red;
+    padding:10px;
+    top:5%;
+    width:90%;
+    text-align:center;
+    border-radius:1rem;
+    background: #eee5; 
+    text-shadow:0 .1rem .1rem #2229; 
+    box-shadow:0 .5vmin 1vmin 1vmin #2223;
+    font-size:4rem;
+    font-family:'Tangerine';
+}
+
+    </style>
+    <audio controls style=" display:none;" loop   id="a"  >
+ <source src="https://file186.iijj.nl/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ0hsTm81ekFjc0U2QUg3YjBuM3VpcE05a0VCYXNLeElUcE5NNWQ5blgxWk1PQ00wVENoWXdqUTM2UjR0ZzI4aExhNEljakY4UmhCVkQra3VxbXFTRjNuUStvTzRyckRMZERlV0o1cGdVeDlTdURuN1NHbjBPOTRWdTA5VUNDZUNGRXNUUUdkcmliOHBOSDFtTGNZT1h2N0lBTnBDcVc4b3AyMGZ5WXZRL0p4cUkzdStONFMxZDljSzlPelovMDB1RFpxMHdtall3UDAwNmJqZGFnT2FnTU9MU3ViQkkrTXpKYXIranFVMFkzNFdNYjRIeTM1S294NTIwTUxQRWp1VFRtcktDL05XL2ViY3ZzU3N6WGVManUvNVNwcE9wMzRsTFg5QT09">
+    <script>
+     Swal.fire('We all have our time machines. Some take us back, they’re called memories. Some take us forward, they’re called dreams ')
+        </script>  
+      </audio> 
+         <div class="main">
+         <div class="tb">
+             <div class="b">
+                 <b>
+Time ! The corrector when our judgements show error</b>
+             </div>
+         </div>
+            <div class="box">
+           <div class="st hour" id="hour"></div>
+            <div class="st min" id="min"></div>
+             <div class="st sec" id="sec"></div>   
+              
+                <div class="clock">
+                    <div class="circle"></div>
+                    <div class="n n1">
+                    <div class="t t1">1</div>
+                    </div>
+                    <div class="n n2">
+                    <div class="t t2">2</div> 
+                    </div>
+                    <div class="n n3">
+                    <div class="t t3">3</div>    
+                    </div>
+                    <div class="n n4">
+                    <div class="t t4">4</div>   
+                    </div>
+                    <div class="n n5">
+                    <div class="t t5">5</div>    
+                    </div>
+                    <div class="n n6">
+                    <div class="t t6">6</div>    
+                    </div>
+                    <div class="n n7">
+                    <div class="t t7">7</div>    
+                    </div>
+                    <div class="n n8">
+                    <div class="t t8">8</div>    
+                    </div>
+                    <div class="n n9">
+                    <div class="t t9">9</div>    
+                    </div>
+                    <div class="n n10">
+                   <div class="t t10">10</div>     
+                    </div>
+                    <div class="n n11">
+                     <div class="t t11">11</div>   
+                    </div>
+                    <div class="n n12">
+                    <div class="t t12">12</div>    
+                    </div>
+                </div><!--end of clock class-->
+                
+            </div><!--end of box class-->
+                <div class="box1">
+               <div class="grid">
+                  <div class="hr" id="h">12</div>
+                  <div class="dot1">:</div>
+                  <div class="dm" id="m">20</div>
+                  <div class="dot2">:</div>
+                  <div class="dsec" id="s">35</div>
+</div> 
+            </div>
+            
+        </div>
+        <script>
+            window.addEventListener("mouseover",play);
+window.addEventListener("click",play);
+function play() { document.getElementById("a").play();
+}
+
+setInterval(() => {
+    d= new Date();
+    ht= d.getHours();
+    mt= d.getMinutes();
+    st= d.getSeconds();
+    hr= 30*ht + mt/2;
+    mr= 6*mt;
+    sr= 6*st;
+    
+    var hour = document.getElementById("hour");
+    var min = document.getElementById("min");
+    var sec = document.getElementById("sec");
+    
+    hour.style.transform= `rotate(${hr}deg)`;
+    min.style.transform= `rotate(${mr}deg)`;
+    sec.style.transform= `rotate(${sr}deg)`;
+    
+    document.getElementById("h").innerHTML = ht; 
+    document.getElementById("m").innerHTML = mt; 
+    document.getElementById("s").innerHTML = st;
+
+},1000);
+        </script>
+    </body>
+</html>
